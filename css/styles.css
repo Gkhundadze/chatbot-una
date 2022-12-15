@@ -1,0 +1,153 @@
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* HEADER SECTION */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.header {
+  display: flex;
+  background-color: #95aaaf;
+  padding: 3rem 14rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__logos {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.navigation__links {
+  list-style-type: none;
+}
+
+.navigation__anchor:link,
+.navigation__anchor:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "BPGBannerCaps";
+  color: #ffff;
+}
+
+@font-face {
+  font-family: "BPGBannerCaps";
+  src: url("../assets/fonts/bpg_banner_caps_[FONTS.GE]/bpg_banner_caps.ttf");
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* MAIN SECTION */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.main__content {
+  padding: 9.6rem 14rem;
+  background-image:url('../assets/img/Circles.png');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  height: 100%;
+}
+
+.main__title {
+  font-family: "BPGBannerCaps";
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2.4rem;
+}
+
+.main__paragraphs__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+.main__paragraphs {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.4rem;
+  color: #fff;
+  line-height: 3.6rem;
+}
+
+.more__anchor {
+  display: flex;
+  align-items: center;
+  font-family: "BPGBannerCaps";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-decoration-line: underline;
+  color: #fff;
+  margin-top: 3.6rem;
+}
+
+.chat__start__btn {
+  display: inline-flex;
+  align-items: center;
+  background: #95aaaf;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #fff;
+  padding: 1.8rem 2rem 2.2rem 2rem;
+  gap: 2rem;
+  margin-top: 9.6rem;
+}
+
+.una__img--container{
+    justify-self: flex-end;
+}
+
+/* Position absolutes */
+
+.hand__logo{
+    position: absolute;
+    top: 6.4rem;
+    left: 42.3rem;
+}
+
+.atom__logo{
+    position: absolute;
+    top: 35.6rem;
+    left: 74.7rem;
+}
+
+.brain__logo{
+    position: absolute;
+    top: 4.4rem;
+    right: 56rem;
+}
+
+/* /////////////////////////////////////////// */
+
+.start__chat__btn:link,.start__chat__btn:visited{
+    display: inline-flex;
+    align-items: center;
+    background-color: #95AAAF;
+    padding: 1.8rem 3.2rem 2.5rem;
+    position: absolute;
+    bottom: 7.4rem;
+    right: 12.8rem;
+    border-radius: 1rem;
+}
+.start__chat__btn::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(0 0 0 / 0%);
+    top: 7rem;
+    left: -4px;
+    height: 5rem;
+    width: 4rem;
+    border-top-left-radius: 5rem;
+    box-shadow: 0 -25px 0 0 #95aaaf;
+}
