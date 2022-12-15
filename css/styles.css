@@ -52,7 +52,10 @@
   background-position: bottom left;
   height: 100%;
 }
+.main__content__welcome__text,.main__content__about__chat__bot{
+  position: relative;
 
+}
 .main__title {
   font-family: "BPGBannerCaps";
   font-size: 3.6rem;
@@ -105,6 +108,7 @@
 }
 
 .una__img--container{
+  position: relative;
     justify-self: flex-end;
 }
 
@@ -112,26 +116,26 @@
 
 .hand__logo{
     position: absolute;
-    top: 6.4rem;
-    left: 42.3rem;
+    top: -3rem;
+    left: 28rem;
 }
 
 .atom__logo{
     position: absolute;
-    top: 35.6rem;
-    left: 74.7rem;
+    top: -2rem;
+    right: 0;
 }
 
 .brain__logo{
-    position: absolute;
-    top: 4.4rem;
-    right: 56rem;
+  position: absolute;
+  top: -5rem;
+  left: -5rem;
 }
 
 /* /////////////////////////////////////////// */
 
 .start__chat__btn:link,.start__chat__btn:visited{
-    display: inline-flex;
+    display: flex;
     align-items: center;
     background-color: #95AAAF;
     padding: 1.8rem 3.2rem 2.5rem;
