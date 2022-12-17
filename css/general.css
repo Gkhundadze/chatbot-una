@@ -7,11 +7,15 @@
 html {
   font-size: 62.5%;
 }
-body{
-    background-image: url("../assets/img/Group\ 27.png");
+body {
+  background-image:url("../assets/img/Layer_1-2.png");
+  background-color: #2F4247;
+  background-position: center bottom -7rem;
+  background-repeat:no-repeat;
+  background-size: contain;
 }
-.main{
-    position: relative;
+.main {
+  position: relative;
 }
 .grid {
   display: grid;
@@ -23,7 +27,7 @@ body{
 }
 
 .secondary__title {
-  font-family: "BPGBannerCaps";
+  font-family: "TBCContracticaRegularCAPS";
   font-style: normal;
   font-weight: 700;
   font-size: 2.4rem;

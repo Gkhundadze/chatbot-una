@@ -30,13 +30,17 @@
   font-size: 2rem;
   font-weight: 500;
   font-style: normal;
-  font-family: "BPGBannerCaps";
+  font-family: "TBCContracticaRegularCAPS";
   color: #ffff;
 }
 
 @font-face {
-  font-family: "BPGBannerCaps";
-  src: url("../assets/fonts/bpg_banner_caps_[FONTS.GE]/bpg_banner_caps.ttf");
+  font-family: "TBCContracticaRegular";
+  src: url("../assets/fonts/contractica-fonts/TBCContractica-Regular.ttf");
+}
+@font-face {
+  font-family: "TBCContracticaRegularCAPS";
+  src: url("../assets/fonts/contractica-fonts/TBCContracticaCAPS-Regular.ttf");
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
@@ -47,17 +51,21 @@
 
 .main__content {
   padding: 9.6rem 14rem;
-  background-image:url('../assets/img/Circles.png');
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  height: 100%;
+  background-image:url('../assets/img/Circles.png'),url('../assets/img/CirclesRotate.png');
+  background-repeat: no-repeat,no-repeat;
+  background-position: bottom -3rem left -6rem,right 1rem center;
+
 }
 .main__content__welcome__text,.main__content__about__chat__bot{
   position: relative;
 
 }
+.Una-Name{
+  font-size: 3rem;
+  font-weight: bolder;
+}
 .main__title {
-  font-family: "BPGBannerCaps";
+  font-family: "TBCContracticaRegularCAPS";
   font-size: 3.6rem;
   font-weight: 700;
   color: #fff;
@@ -71,18 +79,19 @@
   margin-bottom: 2.4rem;
 }
 .main__paragraphs {
-  font-family: sans-serif;
+  font-family: TBCContracticaRegular;
   font-style: normal;
   font-weight: 500;
   font-size: 2.4rem;
   color: #fff;
   line-height: 3.6rem;
+
 }
 
 .more__anchor {
   display: flex;
   align-items: center;
-  font-family: "BPGBannerCaps";
+  font-family: "TBCContracticaRegularCAPS";
   font-style: normal;
   font-weight: 300;
   font-size: 2rem;
@@ -98,6 +107,7 @@
   background: #95aaaf;
   border-radius: 0.8rem;
   text-decoration: none;
+  font-family: 'TBCContracticaRegular';
   font-style: normal;
   font-weight: 400;
   font-size: 2.4rem;
@@ -134,24 +144,43 @@
 
 /* /////////////////////////////////////////// */
 
-.start__chat__btn:link,.start__chat__btn:visited{
-    display: flex;
-    align-items: center;
-    background-color: #95AAAF;
-    padding: 1.8rem 3.2rem 2.5rem;
-    position: absolute;
-    bottom: 7.4rem;
-    right: 12.8rem;
-    border-radius: 1rem;
+.start__chat{
+  position: absolute;
+  bottom: -2rem;
+  right: 12.8rem;
 }
-.start__chat__btn::after{
-    content: "";
-    position: absolute;
-    background-color: rgb(0 0 0 / 0%);
-    top: 7rem;
-    left: -4px;
-    height: 5rem;
-    width: 4rem;
-    border-top-left-radius: 5rem;
-    box-shadow: 0 -25px 0 0 #95aaaf;
+.start__chat--btn{
+  background:none;
+  border: none;
+  cursor: pointer;
+}
+
+.sb3:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #95aaaf;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #95aaaf;
+  border-bottom: 10px solid transparent;
+  left: 0;
+  bottom: -14px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11.2rem;
+  height: 8.2rem;
+  border-radius: 1rem;
+  margin: 50px auto;
+  background: #95aaaf;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  font-family: arial;
+  position: relative;
 }
