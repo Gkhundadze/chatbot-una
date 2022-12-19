@@ -14,11 +14,19 @@ html {
   font-size: 62.5%;
 }
 body {
-  background-image:url("../assets/img/Layer_1-2.png");
-  background-color: #2F4247;
+  background-image: url("../assets/img/Layer_1-2.png");
+  background-color: #2f4247;
   background-position: center bottom -7rem;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: contain;
+}
+@font-face {
+  font-family: "TBCContracticaRegular";
+  src: url("../assets/fonts/contractica-fonts/TBCContractica-Regular.ttf");
+}
+@font-face {
+  font-family: "TBCContracticaRegularCAPS";
+  src: url("../assets/fonts/contractica-fonts/TBCContracticaCAPS-Regular.ttf");
 }
 .main {
   position: relative;
@@ -36,14 +44,11 @@ body {
   font-family: "TBCContracticaRegularCAPS";
   font-style: normal;
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 2.9rem;
-  margin-bottom: 2.4rem;
-  color: #fff;
+  margin-bottom: 2.3rem;
+  color: rgb(255 255 255);
 }
-
-
-
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////////// */
@@ -53,8 +58,8 @@ body {
 
 .header {
   display: flex;
-  background-color: #95aaaf;
-  padding: 3rem 14rem;
+  background-color: #6a7679;
+  padding: 3.2rem 14rem;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -81,15 +86,6 @@ body {
   color: #ffff;
 }
 
-@font-face {
-  font-family: "TBCContracticaRegular";
-  src: url("../assets/fonts/contractica-fonts/TBCContractica-Regular.ttf");
-}
-@font-face {
-  font-family: "TBCContracticaRegularCAPS";
-  src: url("../assets/fonts/contractica-fonts/TBCContracticaCAPS-Regular.ttf");
-}
-
 /* ////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////////// */
 /* MAIN SECTION */
@@ -98,41 +94,51 @@ body {
 
 .main__content {
   padding: 9.6rem 14rem;
-  background-image:url('../assets/img/Circles.png'),url('../assets/img/CirclesRotate.png');
-  background-repeat: no-repeat,no-repeat;
-  background-position: bottom -3rem left -6rem,right 1rem center;
-
+  background-image: url(../assets/img/Circles.png),
+    url(../assets/img/CirclesRotate.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom -3rem left -6rem, right 3rem top 16rem;
 }
-.main__content__welcome__text,.main__content__about__chat__bot{
+.main__content__welcome__text,
+.main__content__about__chat__bot {
   position: relative;
-
 }
-.Una-Name{
-  font-size: 3rem;
+.Una-Name {
+  font-family: "TBCContracticaRegularCAPS";
+  font-size: 2rem;
   font-weight: bolder;
 }
 .main__title {
   font-family: "TBCContracticaRegularCAPS";
-  font-size: 3.6rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  color: #fff;
-  margin-bottom: 2.4rem;
+  color: rgb(255 255 255);
+  margin-bottom: 2.2rem;
 }
-
+.underline {
+  width: 20rem;
+  height: 4px;
+  background-color: #8b83ed;
+  margin-bottom: 1.9rem;
+  border-radius: 1.5rem;
+}
 .main__paragraphs__section {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  margin-bottom: 2.4rem;
 }
 .main__paragraphs {
-  font-family: TBCContracticaRegular;
+  font-family: "TBCContracticaRegular";
   font-style: normal;
   font-weight: 500;
-  font-size: 2.4rem;
-  color: #fff;
-  line-height: 3.6rem;
-
+  font-size: 1.6rem;
+  color: rgb(255 255 255);
+}
+.introduction {
+  margin-bottom: 3.1rem;
+}
+.capability {
+  margin-bottom: 6rem;
 }
 
 .more__anchor {
@@ -144,46 +150,46 @@ body {
   font-size: 2rem;
   line-height: 2.4rem;
   text-decoration-line: underline;
-  color: #fff;
+  color: rgb(255 255 255);
   margin-top: 3.6rem;
 }
 
 .chat__start__btn {
   display: inline-flex;
   align-items: center;
-  background: #95aaaf;
+  background: #6a7679;
   border-radius: 0.8rem;
   text-decoration: none;
-  font-family: 'TBCContracticaRegular';
+  font-family: "TBCContracticaRegular";
   font-style: normal;
   font-weight: 400;
   font-size: 2.4rem;
-  color: #fff;
+  color: rgb(255 255 255);
   padding: 1.8rem 2rem 2.2rem 2rem;
   gap: 2rem;
-  margin-top: 9.6rem;
+  margin-top: 8.6rem;
 }
 
-.una__img--container{
+.una__img--container {
   position: relative;
-    justify-self: flex-end;
+  justify-self: flex-end;
 }
 
 /* Position absolutes */
 
-.hand__logo{
-    position: absolute;
-    top: -3rem;
-    left: 28rem;
+.hand__logo {
+  position: absolute;
+  top: -3rem;
+  left: 28rem;
 }
 
-.atom__logo{
-    position: absolute;
-    top: -2rem;
-    right: 0;
+.atom__logo {
+  position: absolute;
+  top: -2rem;
+  right: 0;
 }
 
-.brain__logo{
+.brain__logo {
   position: absolute;
   top: -5rem;
   left: -5rem;
@@ -191,13 +197,13 @@ body {
 
 /* /////////////////////////////////////////// */
 
-.start__chat{
+.start__chat {
   position: absolute;
-  bottom: -2rem;
-  right: 12.8rem;
+  bottom: 3.2rem;
+  right: 17.6rem;
 }
-.start__chat--btn{
-  background:none;
+.start__chat--btn {
+  background: none;
   border: none;
   cursor: pointer;
 }
@@ -207,9 +213,9 @@ body {
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 10px solid #95aaaf;
+  border-left: 10px solid #6a7679;
   border-right: 10px solid transparent;
-  border-top: 10px solid #95aaaf;
+  border-top: 10px solid #6a7679;
   border-bottom: 10px solid transparent;
   left: 0;
   bottom: -14px;
@@ -219,15 +225,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 11.2rem;
-  height: 8.2rem;
+  width: 6.4rem;
+  height: 6.4rem;
   border-radius: 1rem;
   margin: 50px auto;
-  background: #95aaaf;
+  background: #6a7679;
   padding: 20px;
   text-align: center;
   font-weight: 900;
-  color: #fff;
-  font-family: arial;
+  color: rgb(255 255 255);
   position: relative;
 }
