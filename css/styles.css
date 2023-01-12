@@ -1,0 +1,320 @@
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* GENERAL SECTION */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* body {
+  background-image: url("../assets/img/main-background-pattern.png");
+  background-color: #081f3a;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+@font-face {
+  font-family: "TBCContracticaRegular";
+  src: url("../assets/fonts/contractica-fonts/TBCContractica-Regular.ttf");
+}
+@font-face {
+  font-family: "TBCContracticaRegularCAPS";
+  src: url("../assets/fonts/contractica-fonts/TBCContracticaCAPS-Regular.ttf");
+}
+.main {
+  position: relative;
+  background-image: url("../assets/img/main-background-pattern.png");
+  background-color: #081f3a;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.grid {
+  display: grid;
+}
+
+.grid--2--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.secondary__title {
+  font-family: "TBCContracticaRegularCAPS";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2.3rem;
+  color: rgb(255 255 255);
+}
+.margin-l-md {
+  margin-left: 4.7rem;
+}
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* HEADER SECTION */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.header {
+  display: flex;
+  background-color: #282828;
+  padding: 1.2rem 14rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logos {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.navigation__links {
+  list-style-type: none;
+}
+
+.navigation__anchor:link,
+.navigation__anchor:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "TBCContracticaRegularCAPS";
+  color: #ffff;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* MAIN SECTION */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.main__content {
+  padding: 6.4rem 14rem;
+}
+.main__content__welcome__text {
+  padding: 6rem 8rem;
+  background-color: rgb(80, 103, 120, 0.3);
+  border-radius: 5rem;
+}
+
+.main__content__welcome__text,
+.main__content__about__chat__bot {
+  position: relative;
+}
+.Una-Name {
+  font-family: "TBCContracticaRegularCAPS";
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.main__title {
+  font-family: "TBCContracticaRegularCAPS";
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: rgb(255 255 255);
+  margin-bottom: 2.2rem;
+}
+.main__paragraphs__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.main__paragraphs {
+  font-family: "TBCContracticaRegular";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: rgb(255 255 255);
+  line-height: 2.4rem;
+}
+.introduction {
+  margin-bottom: 2.4rem;
+}
+.capability {
+  margin-bottom: 4.8rem;
+}
+
+.more__anchor {
+  display: flex;
+  align-items: center;
+  font-family: "TBCContracticaRegularCAPS";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-decoration-line: underline;
+  color: rgb(255 255 255);
+  margin-top: 3.6rem;
+}
+
+.chat--start {
+  margin-top: 6.4rem;
+}
+
+.chat__start__btn {
+  display: inline-block;
+  backdrop-filter: blur(20px);
+  background-color: rgb(255, 255, 255, 0.6);
+  border-radius: 3rem;
+  text-decoration: none;
+  font-family: "TBCContracticaRegularCAPS";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #081f3a;
+  padding: 2.7rem 6.1rem 2.7rem 6.1rem;
+  gap: 2rem;
+}
+
+.una__img--container {
+  position: relative;
+  justify-self: flex-end;
+}
+
+.start__chat {
+  position: fixed;
+  bottom: 3.2rem;
+  right: 14.5rem;
+}
+.start__chat--btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.box {
+  background: rgb(80, 103, 120);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(80, 103, 120, 1) 30%,
+    rgba(56, 56, 56, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(80, 103, 120, 1) 30%,
+    rgba(56, 56, 56, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(80, 103, 120, 1) 30%,
+    rgba(56, 56, 56, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#506778",endColorstr="#383838",GradientType=1);
+  padding: 3rem;
+  border-radius: 48%;
+}
+
+/* ABOUT SECTION */
+.about__info {
+  padding: 9.6rem 14rem;
+}
+.about__una {
+  padding: 6.4rem 14rem;
+  background-color: rgb(80, 103, 120, 0.3);
+  border-radius: 3rem;
+}
+
+.about__text {
+  padding-right: 5.7rem;
+}
+.headline {
+  font-family: "TBCContracticaRegularCAPS";
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: rgb(255 255 255);
+  margin-bottom: 3.2rem;
+}
+
+.about__paragraph {
+  font-family: "TBCContracticaRegularCAPS";
+  text-align: justify;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: rgb(255 255 255);
+  line-height: 2.4rem;
+}
+
+.partners__title {
+  font-family: "TBCContracticaRegularCAPS";
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: rgb(255 255 255);
+  text-align: center;
+  margin-bottom: 6.4rem;
+}
+
+.partners__logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: baseline;
+  padding: 0 1rem;
+}
+
+.unabot__iliauni:link,
+.unabot__iliauni:visited {
+  color: #fff;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282828;
+  padding: 5rem 7.8rem;
+}
+.footer__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.4rem;
+}
+.footer__contacts {
+  display: flex;
+  justify-content: center;
+  gap: 5.5rem;
+  color: #fff;
+}
+.contacts {
+  display: grid;
+  gap: 1.2rem;
+}
+.contact__paragraph,
+.contacts__li {
+  font-family: "TBCContracticaRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.contacts__ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.img__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+}
+.info__links:link,
+.info__links:visited {
+  font-family: "TBCContracticaRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #fff;
+}
