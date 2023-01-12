@@ -13,13 +13,14 @@
 html {
   font-size: 62.5%;
 }
-body {
-  background-image: url("../assets/img/Layer_1-2.png");
-  background-color: #2f4247;
-  background-position: center bottom -7rem;
+/* body {
+  background-image: url("../assets/img/main-background-pattern.png");
+  background-color: #081f3a;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-}
+  background-size: cover;
+} */
+
 @font-face {
   font-family: "TBCContracticaRegular";
   src: url("../assets/fonts/contractica-fonts/TBCContractica-Regular.ttf");
@@ -30,6 +31,11 @@ body {
 }
 .main {
   position: relative;
+  background-image: url("../assets/img/main-background-pattern.png");
+  background-color: #081f3a;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .grid {
   display: grid;
@@ -37,7 +43,6 @@ body {
 
 .grid--2--cols {
   grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
 }
 
 .secondary__title {
@@ -45,11 +50,12 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
-  line-height: 2.9rem;
   margin-bottom: 2.3rem;
   color: rgb(255 255 255);
 }
-
+.margin-l-md {
+  margin-left: 4.7rem;
+}
 /* ////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////////// */
 /* HEADER SECTION */
@@ -58,11 +64,10 @@ body {
 
 .header {
   display: flex;
-  background-color: #6a7679;
-  padding: 3.2rem 14rem;
+  background-color: #282828;
+  padding: 1.2rem 14rem;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header__logos {
@@ -93,12 +98,14 @@ body {
 /* ////////////////////////////////////////////////////////////////////////////////// */
 
 .main__content {
-  padding: 9.6rem 14rem;
-  background-image: url(../assets/img/Circles.png),
-    url(../assets/img/CirclesRotate.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom -3rem left -6rem, right 3rem top 16rem;
+  padding: 6.4rem 14rem;
 }
+.main__content__welcome__text {
+  padding: 6rem 8rem;
+  background-color: rgb(80, 103, 120, 0.3);
+  border-radius: 5rem;
+}
+
 .main__content__welcome__text,
 .main__content__about__chat__bot {
   position: relative;
@@ -115,13 +122,6 @@ body {
   color: rgb(255 255 255);
   margin-bottom: 2.2rem;
 }
-.underline {
-  width: 20rem;
-  height: 4px;
-  background-color: #8b83ed;
-  margin-bottom: 1.9rem;
-  border-radius: 1.5rem;
-}
 .main__paragraphs__section {
   display: flex;
   flex-direction: column;
@@ -133,12 +133,13 @@ body {
   font-weight: 500;
   font-size: 1.6rem;
   color: rgb(255 255 255);
+  line-height: 2.4rem;
 }
 .introduction {
-  margin-bottom: 3.1rem;
+  margin-bottom: 2.4rem;
 }
 .capability {
-  margin-bottom: 6rem;
+  margin-bottom: 4.8rem;
 }
 
 .more__anchor {
@@ -154,20 +155,23 @@ body {
   margin-top: 3.6rem;
 }
 
+.chat--start {
+  margin-top: 6.4rem;
+}
+
 .chat__start__btn {
-  display: inline-flex;
-  align-items: center;
-  background: #6a7679;
-  border-radius: 0.8rem;
+  display: inline-block;
+  backdrop-filter: blur(20px);
+  background-color: rgb(255, 255, 255, 0.6);
+  border-radius: 3rem;
   text-decoration: none;
-  font-family: "TBCContracticaRegular";
+  font-family: "TBCContracticaRegularCAPS";
   font-style: normal;
   font-weight: 400;
-  font-size: 2.4rem;
-  color: rgb(255 255 255);
-  padding: 1.8rem 2rem 2.2rem 2rem;
+  font-size: 1.6rem;
+  color: #081f3a;
+  padding: 2.7rem 6.1rem 2.7rem 6.1rem;
   gap: 2rem;
-  margin-top: 8.6rem;
 }
 
 .una__img--container {
@@ -175,32 +179,10 @@ body {
   justify-self: flex-end;
 }
 
-/* Position absolutes */
-
-.hand__logo {
-  position: absolute;
-  top: -3rem;
-  left: 28rem;
-}
-
-.atom__logo {
-  position: absolute;
-  top: -2rem;
-  right: 0;
-}
-
-.brain__logo {
-  position: absolute;
-  top: -5rem;
-  left: -5rem;
-}
-
-/* /////////////////////////////////////////// */
-
 .start__chat {
-  position: absolute;
+  position: fixed;
   bottom: 3.2rem;
-  right: 17.6rem;
+  right: 14.5rem;
 }
 .start__chat--btn {
   background: none;
@@ -208,31 +190,131 @@ body {
   cursor: pointer;
 }
 
-.sb3:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid #6a7679;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #6a7679;
-  border-bottom: 10px solid transparent;
-  left: 0;
-  bottom: -14px;
+.box {
+  background: rgb(80, 103, 120);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(80, 103, 120, 1) 30%,
+    rgba(56, 56, 56, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(80, 103, 120, 1) 30%,
+    rgba(56, 56, 56, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(80, 103, 120, 1) 30%,
+    rgba(56, 56, 56, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#506778",endColorstr="#383838",GradientType=1);
+  padding: 3rem;
+  border-radius: 48%;
 }
 
-.box {
+/* ABOUT SECTION */
+.about__info {
+  padding: 9.6rem 14rem;
+}
+.about__una {
+  padding: 6.4rem 14rem;
+  background-color: rgb(80, 103, 120, 0.3);
+  border-radius: 3rem;
+}
+
+.about__text {
+  padding-right: 5.7rem;
+}
+.headline {
+  font-family: "TBCContracticaRegularCAPS";
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: rgb(255 255 255);
+  margin-bottom: 3.2rem;
+}
+
+.about__paragraph {
+  font-family: "TBCContracticaRegularCAPS";
+  text-align: justify;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: rgb(255 255 255);
+  line-height: 2.4rem;
+}
+
+.partners__title {
+  font-family: "TBCContracticaRegularCAPS";
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: rgb(255 255 255);
+  text-align: center;
+  margin-bottom: 6.4rem;
+}
+
+.partners__logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: baseline;
+  padding: 0 1rem;
+}
+
+.unabot__iliauni:link,
+.unabot__iliauni:visited {
+  color: #fff;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282828;
+  padding: 5rem 7.8rem;
+}
+.footer__logos {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 6.4rem;
-  height: 6.4rem;
-  border-radius: 1rem;
-  margin: 50px auto;
-  background: #6a7679;
-  padding: 20px;
-  text-align: center;
-  font-weight: 900;
-  color: rgb(255 255 255);
-  position: relative;
+  gap: 6.4rem;
+}
+.footer__contacts {
+  display: flex;
+  justify-content: center;
+  gap: 5.5rem;
+  color: #fff;
+}
+.contacts {
+  display: grid;
+  gap: 1.2rem;
+}
+.contact__paragraph,
+.contacts__li {
+  font-family: "TBCContracticaRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.contacts__ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.img__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+}
+.info__links:link,
+.info__links:visited {
+  font-family: "TBCContracticaRegular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #fff;
 }
