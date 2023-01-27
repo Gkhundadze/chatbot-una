@@ -1,6 +1,5 @@
 "use strict";
 
-// const burgerBtn = document.querySelector(".burger__menu__btn");
 const mainNavigation = document.querySelector(".navigation");
 const chatStartBtnAbsolute = document.querySelector(".start__chat--btn");
 const closeIon = document.querySelector(".close__btn");
@@ -42,4 +41,25 @@ moreBtn.addEventListener("click", () => {
 aboutMoreBtn.addEventListener("click", () => {
   aboutMorePara.style.display = "block";
   aboutMoreBtn.style.display = "none";
+});
+
+
+document.querySelectorAll(".chatbot__btns").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    let child = document.querySelector(".chatbot__btn__states");
+    console.log(child);
+    if (child.classList.contains("chatbot__open__btn")) {
+      child.classList.remove("chatbot__open__btn");
+      child.classList.add("chatbot__close__btn");
+      document
+        .getElementById("chatbotIframe")
+        .setAttribute("style", "display: block;");
+    } else {
+      child.classList.remove("chatbot__close__btn");
+      child.classList.add("chatbot__open__btn");
+      document
+        .getElementById("chatbotIframe")
+        .setAttribute("style", "display: none");
+    }
+  });
 });

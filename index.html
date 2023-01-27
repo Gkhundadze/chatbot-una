@@ -21,9 +21,6 @@
   </head>
   <body>
     <header class="header">
-      <!-- <button class="burger__menu__btn">
-        <ion-icon name="menu-outline" class="burger__icon"></ion-icon>
-      </button> -->
       <div class="header__logos">
         <a href="#"> <img src="assets/img/Group-34.webp" alt="main logo" /></a>
         <a href="#"
@@ -110,27 +107,19 @@
           </picture>
         </div>
         <div class="chat--start">
-          <button href="" class="chat__start__btn chat--open">
+          <button href="" class="chat__start__btn chatbot__btns">
             ჩატის დაწყება
           </button>
         </div>
       </section>
-
-      <div class="start__chat">
-        <button class="start__chat--btn box sb3 chat--open">
-          <img
-            src="assets/img/Combined-Shape-path.png"
-            alt="start chat button"
-            class="start__chat__img"
-          />
-          <img
-            src="assets/img/closeBtnIcon.png"
-            class="close__btn start__chat__img hidden"
-            alt=""
-          />
-        </button>
+<!--  -->
+      <div class="chatbot__container">
+        <iframe id="chatbotIframe" src="https://animachatbotics.com/Scripts/bot-MBD/bot/index3.html?botId=1069&tone=0" style="width: 100%; height: 100%; display: none;" frameborder="0"></iframe>
+        <div class="chatbot__btn chatbot__btns">
+          <div class="chatbot__open__btn chatbot__btn__states"></div>
+        </div>
       </div>
-
+<!--  -->
       <section class="about__info" id="about__project">
         <div class="about__una">
           <div class="about__text">
@@ -149,7 +138,7 @@
             </p>
           </div>
           <div class="more__btn--about__div">
-            <button class="more__btn--about hidden">ვრცლად</button>
+            <button class="more__btn--about">ვრცლად</button>
           </div>
         </div>
       </section>
