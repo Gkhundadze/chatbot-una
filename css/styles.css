@@ -234,7 +234,9 @@ body {
   background-color: rgb(80, 103, 120, 0.3);
   border-radius: 3rem;
 }
-
+.more__btn--about__div{
+  display: none;
+}
 .headline {
   font-family: "TBCContracticaRegularCAPS";
   font-weight: 700;
@@ -337,18 +339,64 @@ footer {
   color: #fff;
 }
 
-/* Burger Menu */
-.hidden {
-  display: none;
+
+/* Chatbot code  */
+
+.chatbot__container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 9999;
+  bottom: 3.2rem;
+  right: 13.5rem;
 }
-.burger__menu__btn {
-  display: none;
-  border: none;
-  background: none;
-  font-size: 3.4rem;
-  color: #fff;
+
+.chatbot__btn {
+  background-color: rgb(255 255 255);
+  border-radius: 50%;
+  position: relative;
+  width: 9.6rem;
+  height: 9.6rem;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   cursor: pointer;
 }
+
+.chatbot__btn::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.chatbot__open__btn {
+  background: url("../assets/img/Combined-Shape-path.png") no-repeat center;
+  background-size: contain;
+  width: 4.3rem;
+  height: 4.3rem;
+}
+
+.chatbot__close__btn {
+  background: url("../assets/img/closeBtnIcon.png") no-repeat center;
+  background-size: contain;
+  width: 4.3rem;
+  height: 4.3rem;
+}
+
+#chatbotIframe {
+  width: 370px;
+  max-width: 100%;
+  height: 480px;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1700px) {
   body {
@@ -360,8 +408,8 @@ footer {
     backdrop-filter: blur(10px);
   }
 }
-@media(max-width:1699px){
-  body{
+@media (max-width: 1699px) {
+  body {
     background-size: cover;
     background-position: center;
   }
@@ -370,7 +418,7 @@ footer {
   html {
     font-size: 55.25%;
   }
-  body{
+  body {
     background-size: auto;
   }
   .main__content__welcome__text {
@@ -396,7 +444,7 @@ footer {
     width: 98rem;
     max-width: 100%;
   }
-  .start__chat {
+  .chatbot__container {
     right: 4.3rem;
   }
 }
@@ -410,7 +458,7 @@ footer {
   .main__content {
     padding: 5.4rem 7rem;
   }
-  .start__chat {
+  .chatbot__container {
     right: 6.8rem;
   }
   .footer__contacts {
@@ -423,10 +471,7 @@ footer {
   .about__paragraph {
     text-align: justify;
   }
-  .start__chat--btn {
-    width: 6.6rem;
-    height: 6.6rem;
-  }
+
   .about__info {
     padding: 9.6rem 6rem;
   }
@@ -487,16 +532,16 @@ footer {
     font-size: 50%;
   }
 }
-@media(max-width:540px){
-  .una__img--container{
+@media (max-width: 540px) {
+  .una__img--container {
     position: absolute;
     top: 6rem;
     right: 9rem;
   }
 }
 @media (max-width: 490px) {
-  body{
-    background-image: url('../assets/img/mobile-2-pattern.png');
+  body {
+    background-image: url("../assets/img/mobile-2-pattern.png");
     background-position: right top 18rem;
     background-size: contain;
   }
@@ -506,11 +551,15 @@ footer {
   .chat--start {
     grid-column: 1 / span 2;
   }
-  .start__chat {
+  .chatbot__container {
     right: 0;
   }
   .about__una {
     position: relative;
+  }
+  .chatbot__btn {
+    width: 6.6rem;
+    height: 6.6rem;
   }
   .more__para,
   .more__about__para {
@@ -518,6 +567,7 @@ footer {
   }
   .more__btn--about__div {
     text-align: end;
+    display: block;
   }
   .more__btn--about {
     display: inline-block;
