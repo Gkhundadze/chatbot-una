@@ -14,13 +14,9 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-/* body {
-  background-image: url("../assets/img/main-background-pattern.png");
-  background-color: #081f3a;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+body {
+  position: relative;
+}
 
 @font-face {
   font-family: "TBCContracticaRegular";
@@ -30,13 +26,13 @@ html {
   font-family: "TBCContracticaRegularCAPS";
   src: url("../assets/fonts/contractica-fonts/TBCContracticaCAPS-Regular.ttf");
 }
-.main {
+body {
   position: relative;
-  background-image: url("../assets/img/main-background-pattern.png");
   background-color: #081f3a;
-  background-position: center;
+  background-image: url("../assets/img/main-background-pattern.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center right;
 }
 .grid {
   display: grid;
@@ -66,7 +62,7 @@ html {
 .header {
   display: flex;
   background-color: #282828;
-  padding: 1.2rem 14rem;
+  padding: 4.5rem 14rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -83,7 +79,9 @@ html {
 
 .navigation__anchor:link,
 .navigation__anchor:visited {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 500;
@@ -136,6 +134,21 @@ html {
   color: rgb(255 255 255);
   line-height: 2.4rem;
 }
+.more__btn__div {
+  display: none;
+  text-align: end;
+}
+.more__btn {
+  display: inline-block;
+  font-family: "TBCContracticaRegular";
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: underline;
+  background: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
 .introduction {
   margin-bottom: 2.4rem;
 }
@@ -163,7 +176,7 @@ html {
 .chat__start__btn {
   display: inline-block;
   backdrop-filter: blur(20px);
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: #fff;
   border-radius: 3rem;
   text-decoration: none;
   font-family: "TBCContracticaRegularCAPS";
@@ -173,22 +186,30 @@ html {
   color: #081f3a;
   padding: 2.7rem 6.1rem 2.7rem 6.1rem;
   gap: 2rem;
+  cursor: pointer;
 }
 
 .una__img--container {
   position: relative;
   justify-self: flex-end;
 }
-
+.una--img {
+  max-width: 100%;
+}
 .start__chat {
   position: fixed;
   bottom: 3.2rem;
   right: 13.5rem;
 }
 .start__chat--btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
+  width: 9.6rem;
+  height: 9.6rem;
 }
 .start__chat__img {
   width: 4.3rem;
@@ -196,11 +217,14 @@ html {
 }
 
 .box {
-  background-color: rgb(80, 103, 120, 0.3);
+  background-color: #fff;
   padding: 3rem;
   border-radius: 48%;
 }
 
+.close__btn {
+  font-size: 4.3rem;
+}
 /* ABOUT SECTION */
 .about__info {
   padding: 9.6rem 14rem;
@@ -210,9 +234,8 @@ html {
   background-color: rgb(80, 103, 120, 0.3);
   border-radius: 3rem;
 }
-
-.about__text {
-  padding-right: 5.7rem;
+.more__btn--about__div{
+  display: none;
 }
 .headline {
   font-family: "TBCContracticaRegularCAPS";
@@ -314,4 +337,284 @@ footer {
   font-weight: 400;
   font-size: 1.6rem;
   color: #fff;
+}
+
+
+/* Chatbot code  */
+
+.chatbot__container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 9999;
+  bottom: 3.2rem;
+  right: 13.5rem;
+}
+
+.chatbot__btn {
+  background-color: rgb(255 255 255);
+  border-radius: 50%;
+  position: relative;
+  width: 9.6rem;
+  height: 9.6rem;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chatbot__btn::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.chatbot__open__btn {
+  background: url("../assets/img/Combined-Shape-path.png") no-repeat center;
+  background-size: contain;
+  width: 4.3rem;
+  height: 4.3rem;
+}
+
+.chatbot__close__btn {
+  background: url("../assets/img/closeBtnIcon.png") no-repeat center;
+  background-size: contain;
+  width: 4.3rem;
+  height: 4.3rem;
+}
+
+#chatbotIframe {
+  width: 370px;
+  max-width: 100%;
+  height: 480px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1700px) {
+  body {
+    background-image: url("../assets/img/background-pattern-medium.png");
+    background-size: auto;
+    background-position: right top;
+  }
+  .main__content__welcome__text {
+    backdrop-filter: blur(10px);
+  }
+}
+@media (max-width: 1699px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (max-width: 1500px) {
+  html {
+    font-size: 55.25%;
+  }
+  body {
+    background-size: auto;
+  }
+  .main__content__welcome__text {
+    padding: 3.6rem 2.5rem;
+    border-radius: 2rem;
+    background-color: rgb(80 103 120 / 30%);
+  }
+  footer {
+    padding: 5.4rem 16rem;
+  }
+  .grid--2--cols {
+    gap: 9.9rem;
+  }
+  .una__img--container {
+    justify-self: center;
+    align-self: center;
+  }
+  .about__info {
+    padding: 9.6rem 13rem;
+  }
+  .about__una {
+    padding: 7.4rem 7.8rem;
+    width: 98rem;
+    max-width: 100%;
+  }
+  .chatbot__container {
+    right: 4.3rem;
+  }
+}
+
+@media (max-width: 1090px) {
+  body {
+    background-image: url("../assets/img/tablet-1-pattern.png");
+    background-position: top;
+    background-size: auto;
+  }
+  .main__content {
+    padding: 5.4rem 7rem;
+  }
+  .chatbot__container {
+    right: 6.8rem;
+  }
+  .footer__contacts {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  footer {
+    padding: 6.4rem 14.5rem;
+  }
+  .about__paragraph {
+    text-align: justify;
+  }
+
+  .about__info {
+    padding: 9.6rem 6rem;
+  }
+}
+
+@media (max-width: 990px) {
+  body {
+    background-image: url("../assets/img/tablet-background.png");
+    background-position: top;
+  }
+  .main__content__welcome__text {
+    backdrop-filter: blur(0px);
+  }
+  .main__content {
+    position: relative;
+  }
+  .grid--2--cols {
+    gap: 0;
+  }
+  .una__img--container {
+    position: absolute;
+    top: 7rem;
+    right: 10rem;
+  }
+
+  .main__content__welcome__text {
+    grid-column: 1 / span 2;
+  }
+  .footer__flexbox {
+    flex-direction: column;
+  }
+  .footer__partners {
+    text-align: center;
+    margin-bottom: 2.4rem;
+  }
+  .about__una {
+    padding: 3.2rem 4.8rem;
+  }
+  .about__info {
+    padding: 8.1rem 6rem;
+  }
+  .chat__start__btn {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .about__span {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .header {
+    padding: 4.6rem 3.8rem;
+  }
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 540px) {
+  .una__img--container {
+    position: absolute;
+    top: 6rem;
+    right: 9rem;
+  }
+}
+@media (max-width: 490px) {
+  body {
+    background-image: url("../assets/img/mobile-2-pattern.png");
+    background-position: right top 18rem;
+    background-size: contain;
+  }
+  .chat__start__btn {
+    padding: 2.7rem 6rem;
+  }
+  .chat--start {
+    grid-column: 1 / span 2;
+  }
+  .chatbot__container {
+    right: 0;
+  }
+  .about__una {
+    position: relative;
+  }
+  .chatbot__btn {
+    width: 6.6rem;
+    height: 6.6rem;
+  }
+  .more__para,
+  .more__about__para {
+    display: none;
+  }
+  .more__btn--about__div {
+    text-align: end;
+    display: block;
+  }
+  .more__btn--about {
+    display: inline-block;
+    font-family: "TBCContracticaRegular";
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: underline;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .more__paragraph {
+    display: none;
+  }
+  .more__btn__div {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .chat__start__btn {
+    width: 100%;
+    text-align: center;
+    padding: 2.7rem 6rem;
+  }
+  .main__content {
+    padding: 5.5rem 3.5rem;
+  }
+  .main__content__welcome__text {
+    padding: 2.4rem 1.1rem;
+  }
+  .una__img--container {
+    position: absolute;
+    top: 7rem;
+    right: 4rem;
+  }
+  .footer__partners {
+    display: none;
+  }
+  .about__una {
+    padding: 2.4rem 1.3rem;
+  }
+  .footer__logos {
+    margin-bottom: 1rem;
+  }
 }
