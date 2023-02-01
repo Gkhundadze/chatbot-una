@@ -47,7 +47,6 @@ aboutMoreBtn.addEventListener("click", () => {
 document.querySelectorAll(".chatbot__btns").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     let child = document.querySelector(".chatbot__btn__states");
-    console.log(child);
     if (child.classList.contains("chatbot__open__btn")) {
       child.classList.remove("chatbot__open__btn");
       child.classList.add("chatbot__close__btn");
