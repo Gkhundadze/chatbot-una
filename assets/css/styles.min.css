@@ -1,33 +1,54 @@
-/* ////////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////////// */
-/* GENERAL SECTION */
-/* ////////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////////// */
-
+.header,
+.header__logos {
+  align-items: center;
+  display: flex;
+}
+.navigation__anchor:link,
+.navigation__anchor:visited,
+.secondary__title {
+  font-size: 2rem;
+  font-family: TBCContracticaRegularCAPS;
+  font-style: normal;
+}
+.chat__start__btn,
+.headline,
+.main__title,
+.more__anchor,
+.secondary__title,
+.una-Name {
+  font-family: TBCContracticaRegularCAPS;
+}
+.main__content__about__chat__bot,
+.main__content__welcome__text,
+body {
+  position: relative;
+}
+.header,
+footer {
+  background-color: #282828;
+}
+#chatbotIframe,
+.una--img {
+  max-width: 100%;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-body {
-  position: relative;
-}
-
 @font-face {
-  font-family: "TBCContracticaRegular";
+  font-family: TBCContracticaRegular;
   src: url("../fonts/contractica-fonts/TBCContractica-Regular.ttf");
 }
 @font-face {
-  font-family: "TBCContracticaRegularCAPS";
+  font-family: TBCContracticaRegularCAPS;
   src: url("../fonts/contractica-fonts/TBCContracticaCAPS-Regular.ttf");
 }
 body {
-  position: relative;
   background-color: #081f3a;
   background-image: url("../img/main-background-pattern.png");
   background-repeat: no-repeat;
@@ -37,65 +58,39 @@ body {
 .grid {
   display: grid;
 }
-
 .grid--2--cols {
   grid-template-columns: repeat(2, 1fr);
 }
-
 .secondary__title {
-  font-family: "TBCContracticaRegularCAPS";
-  font-style: normal;
   font-weight: 700;
-  font-size: 2rem;
   margin-bottom: 2.3rem;
   color: rgb(255 255 255);
 }
 .margin-l-md {
   margin-left: 4.7rem;
 }
-/* ////////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////////// */
-/* HEADER SECTION */
-/* ////////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////////// */
-
 .header {
-  display: flex;
-  background-color: #282828;
   padding: 4.5rem 14rem;
-  align-items: center;
   justify-content: space-between;
 }
-
 .header__logos {
-  display: flex;
-  align-items: center;
   gap: 4.8rem;
 }
-
 .navigation__links {
   list-style-type: none;
 }
-
 .navigation__anchor:link,
 .navigation__anchor:visited {
   display: flex;
   align-items: center;
   gap: 1rem;
   text-decoration: none;
-  font-size: 2rem;
   font-weight: 500;
-  font-style: normal;
-  font-family: "TBCContracticaRegularCAPS";
   color: #ffff;
 }
-
-/* ////////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////////// */
-/* MAIN SECTION */
-/* ////////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////////// */
-
+.hiddenIcon {
+  display: none;
+}
 .main__content {
   padding: 6.4rem 14rem;
 }
@@ -104,22 +99,20 @@ body {
   background-color: rgb(80, 103, 120, 0.3);
   border-radius: 5rem;
 }
-
-.main__content__welcome__text,
-.main__content__about__chat__bot {
-  position: relative;
-}
-.Una-Name {
-  font-family: "TBCContracticaRegularCAPS";
-  font-size: 2rem;
-  font-weight: bolder;
+.una-Name {
+  font-size: 1.7rem;
+  font-weight: 400;
 }
 .main__title {
-  font-family: "TBCContracticaRegularCAPS";
   font-size: 2.4rem;
   font-weight: 700;
   color: rgb(255 255 255);
   margin-bottom: 2.2rem;
+}
+.main__paragraphs,
+.more__btn {
+  font-weight: 500;
+  font-family: TBCContracticaRegular;
 }
 .main__paragraphs__section {
   display: flex;
@@ -127,10 +120,8 @@ body {
   gap: 1.2rem;
 }
 .main__paragraphs {
-  font-family: "TBCContracticaRegular";
   font-style: normal;
-  font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: rgb(255 255 255);
   line-height: 2.4rem;
 }
@@ -140,11 +131,9 @@ body {
 }
 .more__btn {
   display: inline-block;
-  font-family: "TBCContracticaRegular";
   font-size: 1.2rem;
-  font-weight: 500;
   text-decoration: underline;
-  background: none;
+  background: 0 0;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -155,11 +144,9 @@ body {
 .capability {
   margin-bottom: 4.8rem;
 }
-
 .more__anchor {
   display: flex;
   align-items: center;
-  font-family: "TBCContracticaRegularCAPS";
   font-style: normal;
   font-weight: 300;
   font-size: 2rem;
@@ -168,34 +155,28 @@ body {
   color: rgb(255 255 255);
   margin-top: 3.6rem;
 }
-
 .chat--start {
   margin-top: 6.4rem;
 }
-
 .chat__start__btn {
   display: inline-block;
   backdrop-filter: blur(20px);
   background-color: #fff;
   border-radius: 3rem;
   text-decoration: none;
-  font-family: "TBCContracticaRegularCAPS";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
   color: #081f3a;
-  padding: 2.7rem 6.1rem 2.7rem 6.1rem;
+  padding: 2.7rem 6.1rem;
   gap: 2rem;
   cursor: pointer;
 }
-
 .una__img--container {
   position: relative;
   justify-self: flex-end;
 }
-.una--img {
-  max-width: 100%;
-}
+.chatbot__container,
 .start__chat {
   position: fixed;
   bottom: 3.2rem;
@@ -205,7 +186,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none;
+  background: 0 0;
   border: none;
   cursor: pointer;
   width: 9.6rem;
@@ -215,17 +196,14 @@ body {
   width: 4.3rem;
   height: 4.3rem;
 }
-
 .box {
   background-color: #fff;
   padding: 3rem;
   border-radius: 48%;
 }
-
 .close__btn {
   font-size: 4.3rem;
 }
-/* ABOUT SECTION */
 .about__info {
   padding: 9.6rem 14rem;
 }
@@ -234,35 +212,38 @@ body {
   background-color: rgb(80, 103, 120, 0.3);
   border-radius: 3rem;
 }
-.more__btn--about__div{
+.more__btn--about__div {
   display: none;
 }
 .headline {
-  font-family: "TBCContracticaRegularCAPS";
   font-weight: 700;
   font-size: 2.4rem;
   color: rgb(255 255 255);
   margin-bottom: 3.2rem;
 }
-
+.about__paragraph,
+.partners__title {
+  font-family: TBCContracticaRegularCAPS;
+  font-size: 1.6rem;
+  color: rgb(255 255 255);
+}
 .about__paragraph {
-  font-family: "TBCContracticaRegularCAPS";
   text-align: justify;
   font-weight: 500;
-  font-size: 1.6rem;
-  color: rgb(255 255 255);
   line-height: 2.4rem;
 }
-
 .partners__title {
-  font-family: "TBCContracticaRegularCAPS";
   font-weight: 700;
-  font-size: 1.6rem;
-  color: rgb(255 255 255);
   text-align: center;
   margin-bottom: 6.4rem;
 }
-
+.footer__contacts,
+.info__links:link,
+.info__links:visited,
+.unabot__iliauni:link,
+.unabot__iliauni:visited {
+  color: #fff;
+}
 .partners__logos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -270,16 +251,7 @@ body {
   align-items: baseline;
   padding: 0 1rem;
 }
-
-.unabot__iliauni:link,
-.unabot__iliauni:visited {
-  color: #fff;
-}
-
-/* FOOTER */
-
 footer {
-  background-color: #282828;
   padding: 6rem 27.8rem;
 }
 .footer__flexbox {
@@ -288,69 +260,52 @@ footer {
   align-items: center;
 }
 .footer__partners {
-  font-family: "TBCContracticaRegular";
+  font-family: TBCContracticaRegular;
   font-size: 2rem;
   font-weight: 600;
   color: #fff;
+}
+.contact__paragraph,
+.contacts__li,
+.info__links:link,
+.info__links:visited {
+  font-family: TBCContracticaRegular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 .footer__logos {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6.4rem;
+  gap: 4rem;
 }
 .footer__contacts {
   display: flex;
   justify-content: center;
   gap: 5.5rem;
-  color: #fff;
 }
 .contacts {
   display: grid;
   gap: 1.2rem;
 }
-.contact__paragraph,
-.contacts__li {
-  font-family: "TBCContracticaRegular";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.6rem;
-}
-
 .contacts__ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   text-align: justify;
 }
-
 .img__links {
   display: flex;
   align-items: center;
   gap: 2.2rem;
 }
-.info__links:link,
-.info__links:visited {
-  font-family: "TBCContracticaRegular";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.6rem;
-  color: #fff;
-}
-
-
-/* Chatbot code  */
-
 .chatbot__container {
-  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   z-index: 9999;
-  bottom: 3.2rem;
-  right: 13.5rem;
 }
-
 .chatbot__btn {
   background-color: rgb(255 255 255);
   border-radius: 50%;
@@ -366,7 +321,6 @@ footer {
   justify-content: center;
   cursor: pointer;
 }
-
 .chatbot__btn::after {
   position: absolute;
   content: "";
@@ -375,28 +329,20 @@ footer {
   right: 0;
   bottom: 0;
 }
-
 .chatbot__open__btn {
-  background: url("../img/Combined-Shape-path.png") no-repeat center;
-  background-size: contain;
+  background: url("../img/Combined-Shape-path.png") center/contain no-repeat;
   width: 4.3rem;
   height: 4.3rem;
 }
-
 .chatbot__close__btn {
-  background: url("../img/closeBtnIcon.png") no-repeat center;
-  background-size: contain;
+  background: url("../img/closeBtnIcon.png") center/contain no-repeat;
   width: 4.3rem;
   height: 4.3rem;
 }
-
 #chatbotIframe {
   width: 370px;
-  max-width: 100%;
   height: 480px;
 }
-
-/* MEDIA QUERIES */
 @media (max-width: 1700px) {
   body {
     background-image: url("../img/background-pattern-medium.png");
@@ -447,7 +393,6 @@ footer {
     right: 4.3rem;
   }
 }
-
 @media (max-width: 1090px) {
   body {
     background-image: url("../img/tablet-1-pattern.png");
@@ -470,12 +415,10 @@ footer {
   .about__paragraph {
     text-align: justify;
   }
-
   .about__info {
     padding: 9.6rem 6rem;
   }
 }
-
 @media (max-width: 990px) {
   body {
     background-image: url("../img/tablet-background.png");
@@ -483,6 +426,7 @@ footer {
   }
   .main__content__welcome__text {
     backdrop-filter: blur(0px);
+    grid-column: 1 / span 2;
   }
   .main__content {
     position: relative;
@@ -495,12 +439,9 @@ footer {
     top: 7rem;
     right: 10rem;
   }
-
-  .main__content__welcome__text {
-    grid-column: 1 / span 2;
-  }
   .footer__flexbox {
     flex-direction: column;
+    gap: 3rem;
   }
   .footer__partners {
     text-align: center;
@@ -510,19 +451,23 @@ footer {
     padding: 3.2rem 4.8rem;
   }
   .about__info {
-    padding: 8.1rem 6rem;
+    padding: 8.1rem 3.5rem;
   }
   .chat__start__btn {
     margin-top: 0;
   }
+  .contacts__ul {
+    padding-left: 2rem;
+  }
 }
-
 @media (max-width: 660px) {
   .about__span {
     display: none;
   }
+  .hiddenIcon {
+    display: block;
+  }
 }
-
 @media (max-width: 620px) {
   .header {
     padding: 4.6rem 3.8rem;
@@ -560,27 +505,26 @@ footer {
     width: 6.6rem;
     height: 6.6rem;
   }
+  .more__about__para,
   .more__para,
-  .more__about__para {
+  .more__paragraph {
     display: none;
   }
   .more__btn--about__div {
     text-align: end;
     display: block;
+    margin-top: 1rem;
   }
   .more__btn--about {
     display: inline-block;
-    font-family: "TBCContracticaRegular";
+    font-family: TBCContracticaRegular;
     font-size: 1.2rem;
     font-weight: 500;
     text-decoration: underline;
-    background: none;
+    background: 0 0;
     color: #fff;
     border: none;
     cursor: pointer;
-  }
-  .more__paragraph {
-    display: none;
   }
   .more__btn__div {
     display: block;
@@ -589,7 +533,6 @@ footer {
     bottom: 1.5rem;
   }
 }
-
 @media (max-width: 430px) {
   .chat__start__btn {
     width: 100%;
@@ -611,9 +554,14 @@ footer {
     display: none;
   }
   .about__una {
-    padding: 2.4rem 1.3rem;
+    padding: 2.6rem 3.9rem;
   }
   .footer__logos {
     margin-bottom: 1rem;
+  }
+}
+@media (max-width: 380px) {
+  .main__content__welcome__text {
+    min-height: 450px;
   }
 }
