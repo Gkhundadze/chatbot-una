@@ -41,12 +41,16 @@ html {
   scroll-behavior: smooth;
 }
 @font-face {
-  font-family: TBCContracticaRegular;
+  font-family: "TBCContracticaRegular";
   src: url("../fonts/contractica-fonts/TBCContractica-Regular.ttf");
 }
 @font-face {
-  font-family: TBCContracticaRegularCAPS;
+  font-family: "TBCContracticaRegularCAPS";
   src: url("../fonts/contractica-fonts/TBCContracticaCAPS-Regular.ttf");
+}
+@font-face {
+  font-family: "TBCContracticaRegularLight";
+  src: url("../fonts/contractica-fonts/TBCContractica-Light.ttf");
 }
 body {
   background-color: #081f3a;
@@ -67,7 +71,7 @@ body {
   color: rgb(255 255 255);
 }
 .margin-l-md {
-  margin-left: 4.7rem;
+  margin-left: 4.3rem;
 }
 .header {
   padding: 4.5rem 14rem;
@@ -221,16 +225,19 @@ body {
   color: rgb(255 255 255);
   margin-bottom: 3.2rem;
 }
-.about__paragraph,
 .partners__title {
   font-family: TBCContracticaRegularCAPS;
   font-size: 1.6rem;
   color: rgb(255 255 255);
 }
 .about__paragraph {
+  font-family: "TBCContracticaRegularLight";
   text-align: justify;
   font-weight: 500;
   line-height: 2.4rem;
+  text-transform: lowercase;
+  font-size: 1.6rem;
+  color: rgb(255 255 255);
 }
 .partners__title {
   font-weight: 700;
@@ -281,7 +288,8 @@ footer {
   gap: 4rem;
 }
 .footer__contacts {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   gap: 5.5rem;
 }
@@ -294,11 +302,12 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: justify;
+  align-items: center;
 }
 .img__links {
   display: flex;
   align-items: center;
-  gap: 2.2rem;
+  gap: 1.5rem;
 }
 .chatbot__container {
   display: flex;
@@ -406,11 +415,14 @@ footer {
     right: 6.8rem;
   }
   .footer__contacts {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 4rem;
   }
+  .img__links {
+    justify-content: center;
+  }
   footer {
-    padding: 6.4rem 14.5rem;
+    padding: 6.4rem 0rem;
   }
   .about__paragraph {
     text-align: justify;
