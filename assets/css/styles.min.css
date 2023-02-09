@@ -231,13 +231,19 @@ body {
   color: rgb(255 255 255);
 }
 .about__paragraph {
-  font-family: "TBCContracticaRegularLight";
-  text-align: justify;
+  /* font-family: "TBCContracticaRegularLight"; */
+  font-family: TBCContracticaRegular;
+  /* text-align: justify;
   font-weight: 500;
   line-height: 2.4rem;
   text-transform: lowercase;
+  font-weight: 500;
   font-size: 1.6rem;
+  color: rgb(255 255 255); */
+  font-style: normal;
+  font-size: 1.4rem;
   color: rgb(255 255 255);
+  line-height: 2.4rem;
 }
 .partners__title {
   font-weight: 700;
